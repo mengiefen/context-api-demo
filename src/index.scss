@@ -13,7 +13,7 @@ code {
 }
 
 .content-area {
-  width: 40%;
+  width: 400px;
   padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
@@ -34,12 +34,12 @@ code {
 }
 
 .title {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
 .total-expense {
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   font-weight: 600;
 }
 
@@ -57,13 +57,15 @@ code {
 }
 
 .border-expense {
-  border-right: 5px solid #810;
+  border-right: 7.5px solid #810;
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+  background-color: #f3c3bc;
 }
 
 .border-income {
-  border-right: 5px solid #041;
+  border-right: 7.5px solid #041;
   box-shadow: 0 0 2 0 rgba(0, 0, 0, 0.2);
+  background-color: rgb(202, 245, 212);
 }
 
 .card-title {
@@ -73,4 +75,37 @@ code {
 
 .list-group {
   border-radius: 0;
+}
+
+.list-group-item {
+  position: relative;
+}
+
+.list-group-item:hover .close-button {
+  display: block;
+}
+
+.close-button {
+  display: none;
+  font-size: 0.75rem;
+  box-shadow: none;
+  position: absolute;
+  right: 0.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &:focus,
+  &:active {
+    box-shadow: none;
+    display: block;
+  }
+}
+
+.close-button[aria-lebel]:hover::before,
+.close-button[aria-label]:hover::after {
+  color: red;
+}
+
+.dollar-symbol {
+  font-weight: 600;
 }
